@@ -551,6 +551,3 @@ async function updatePlayerCards(playerName) {
         alert("HTTP-Error: " + response.status);
     }
 }
-
-
-
