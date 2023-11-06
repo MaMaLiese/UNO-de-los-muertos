@@ -91,10 +91,30 @@ button {
   padding-top: 275px;
 }
 
-#directionImg {
+/* #directionImg {
   height: 150px;
+} */
+
+/* style für Animation - Rotate Direction.img */
+.rotateContainer {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  position: relative;
 }
 
+#directionImg {
+  width: 150px;
+  height: 150px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.rotated {
+  transform: rotate(720deg);
+}
+
+
+/* Ende - style für Animation - rotate direction.img */
 .spinLeft {
   
  /* animation: spin-left 3s linear infinite;*/
@@ -112,6 +132,82 @@ button {
 .gap-15 {
   gap: 15px;
 }
+
+/*help Modal style*/
+
+#helpModal {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  
+  width: 80%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.modal-content {
+  background-color: #ebe6f7;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+.modal-header {
+  text-align: right;
+}
+.close {
+  color: #071540;
+  float: right;
+  font-size: 48px;
+  cursor: pointer;
+}
+.modal-body {
+  display: block;
+}
+.tab {
+  overflow: hidden;
+}
+.tab button {
+  background-color: #ccc;
+  float: left;
+  border: 1px solid #ccc;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+.tab button:hover {
+  background-color: #ddd;
+}
+.tabcontent {
+  display: none;
+}
+.card-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Fügt unten Abstand zwischen den Blöcken hinzu */
+}
+
+.card-image {
+  margin-right: 10px; /* Fügt rechten Abstand zwischen Bild und Text hinzu */
+}
+.grayscale-img {
+  margin-right: 10px;
+  filter: grayscale(100%);
+}
+
+h3 {
+  font-size: 24px;
+}
+p {
+  font-size: 16px;
+}
+
+
+
+
+/*Ende help Modal style*/
 
 @keyframes move {
   10%,
@@ -163,3 +259,4 @@ button {
     transform: rotate(-360deg);
   }
 }
+

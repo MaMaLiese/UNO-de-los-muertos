@@ -264,24 +264,44 @@ async function image_clicked(ev) {
     if (ev.target.Text == 'Draw2' || ev.target.Text == 'Draw4') {
         isDrawCard = true;
     }
+    //hier passiert Richtungswechsel
     if (ev.target.Text == 'Reverse') {
         direction *= -1;
         displayDirection();
-      //  toggleSpinAnimationDirection();
     }
 
-
-    tryToPlayCard(ev.target.CardValue, color, wildColor, isDrawCard);
+    
+    //  toggleSpinAnimationDirection();
+ 
+tryToPlayCard(ev.target.CardValue, color, wildColor, isDrawCard);
 };
 
-function displayDirection(){
-    if (direction == 1){
-document.getElementById("directionImg").src="others/direction_cw.png";
-    }
-    if(direction == -1){
-        document.getElementById("directionImg").src="others/direction_ccw.png";
-    }
+const directionImg = document.getElementById("directionImg");
+
+function displayDirection() {
+  if (direction === 1) {
+    directionImg.classList.add("rotated");
+    setTimeout(() => {
+      directionImg.src = "others/direction_cw.png";
+      directionImg.classList.remove("rotated");
+    }, 1000); // Zeit sollte zur Dauer der CSS-Transition passen
+  }
+  if (direction === -1) {
+    directionImg.classList.add("rotated");
+    setTimeout(() => {
+      directionImg.src = "others/direction_ccw.png";
+      directionImg.classList.remove("rotated");
+    }, 1000); // Zeit sollte zur Dauer der CSS-Transition passen
+  }
 }
+// function displayDirection() {
+//     if (direction == 1) {
+//         document.getElementById("directionImg").src = "others/direction_cw.png";
+//     }
+//     if (direction == -1) {
+//         document.getElementById("directionImg").src = "others/direction_ccw.png";
+//     }
+// }
 /*function toggleSpinAnimationDirection() {
     if (document.getElementById("directionImg").classList.contains('spinRight')) {
         document.getElementById("directionImg").classList.remove('spinRight');
@@ -551,3 +571,39 @@ async function updatePlayerCards(playerName) {
         alert("HTTP-Error: " + response.status);
     }
 }
+/******************************************************************/
+//öffnen, anzeigen, navigieren und schließen von Spielhilfe-Modal
+/******************************************************************/
+//let myModal = new bootstrap.Modal(document.getElementById('playerNames'));
+
+
+//document.getElementById("startbutton").addEventListener("click", function () {
+//    myModal.show();
+//})
+
+document.getElementById('helpbutton').addEventListener('click', function () {
+    document.getElementById('helpModal').style.display = 'block';
+});
+
+document.getElementById('closeHelpbutton').addEventListener('click', function () {
+    document.getElementById('helpModal').style.display = 'none';
+});
+
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+
+    tabcontent = document.getElementsByClassName('tabcontent');
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = 'none';
+    }
+
+    tablinks = document.getElementsByClassName('tablinks');
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = '#ccc';
+    }
+
+    document.getElementById(tabName).style.display = 'block';
+    evt.currentTarget.style.backgroundColor = '#ddd';
+}
+
+
