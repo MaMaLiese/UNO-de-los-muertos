@@ -92,7 +92,7 @@ button {
 }
 
 /* #directionImg {
-  height: 150px;
+  height: 250px;
 } */
 
 /* style für Animation - Rotate Direction.img */
@@ -115,14 +115,15 @@ button {
 
 
 /* Ende - style für Animation - rotate direction.img */
-.spinLeft {
-  
- /* animation: spin-left 3s linear infinite;*/
+
+
+/* .spinLeft {
+   animation: spin-left 3s linear infinite;
 }
 
 .spinRight {
- /* animation: spin-right 3s linear infinite;*/
-}
+ animation: spin-right 3s linear infinite;
+} */
 
 .middlePlayerRow {
   min-height: 277px;
@@ -205,8 +206,6 @@ p {
 }
 
 
-
-
 /*Ende help Modal style*/
 
 @keyframes move {
@@ -260,3 +259,12 @@ p {
   }
 }
 
+.color-buttons{
+  margin-left: 30px;  
+  }
+  #player3column{
+    margin-top: 40px;
+  }
+  #player1column{
+    margin-bottom: 40px;
+  }

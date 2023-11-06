@@ -39,6 +39,9 @@
                         <h4 id="namePlayer4"></h4>
                         <img id="pointer_3" src="others/Skeleton_hand_pointing.png" class="hidden pointer">
                     </div>
+                    <div class="d-flex justify-content-center">
+                        <h6 class="Score" id="Score_3"></h6>
+                    </div>
                     <div class="cardContainer d-flex flex-row justify-content-center" id="cards_player4"></div>
 
                 </div>
@@ -47,11 +50,14 @@
 
                     <!-- Player 1 -->
                     <div class="row middlePlayerRow">
-                        <div class="col-12 d-flex align-items-end justify-content-center">
+                        <div class="col-12 d-flex align-items-end justify-content-center" id="player1column">
                             <div>
                                 <div class="d-flex flex-row justify-content-center name_score" id="name_score_0">
                                     <h4 id="namePlayer1"></h4>
                                     <img id="pointer_0" src="others/Skeleton_hand_pointing.png" class="hidden pointer">
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <h6 class="Score" id="Score_0"></h6>
                                 </div>
                                 <div class="cardContainer d-flex flex-row justify-content-center" id="cards_player1">
                                 </div>
@@ -70,10 +76,13 @@
 
                     <!-- Player 3 -->
                     <div class="row mt-4 middlePlayerRow">
-                        <div class="col-12">
+                        <div class="col-12" id="player3column">
                             <div class="d-flex flex-row justify-content-center name_score" id="name_score_2">
                                 <h4 id="namePlayer3"></h4>
                                 <img id="pointer_2" src="others/Skeleton_hand_pointing.png" class="hidden pointer">
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <h6 class="Score" id="Score_2"></h6>
                             </div>
                             <div class="cardContainer d-flex flex-row justify-content-center" id="cards_player3"></div>
                         </div>
@@ -87,6 +96,9 @@
                     <div class="d-flex flex-row justify-content-center name_score" id="name_score_1">
                         <h4 id="namePlayer2"></h4>
                         <img id="pointer_1" src="others/Skeleton_hand_pointing.png" class="hidden pointer">
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <h6 class="Score" id="Score_1"></h6>
                     </div>
                     <div class="cardContainer d-flex flex-row justify-content-center" id="cards_player2"></div>
                 </div>
@@ -165,7 +177,7 @@
                             </button>
                         </div>
                     </div>
-                    <div id="row-2" class="row align-self-center ">
+                    <div id="row-2" class="row">
                         <div class="col-6">
                             <button type="submit" id="Green" class="color-buttons">
                                 <img src="colorskulls\green_skull.jpg">
@@ -181,6 +193,26 @@
             </div>
         </div>
     </div>
+
+<!-- WinnerModal -->
+<div class="modal fade" id="WinnerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">WE HAVE A WINNER!</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="WinnerModalBody">
+                <h3 id="winner"></h3>
+                <img src="https://www.icegif.com/wp-content/uploads/dia-de-los-muertos-icegif.gif">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
     <!-- Game Help Modal-->
     <div id="helpModal" class="modal">
         <div class="modal-content" id="helpModal-content">

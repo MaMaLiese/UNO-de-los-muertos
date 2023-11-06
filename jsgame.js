@@ -10,7 +10,7 @@ let topCardColor;
 
 let myModal = new bootstrap.Modal(document.getElementById('playerNames'));
 let ColorchangeModal = new bootstrap.Modal(document.getElementById('ColorchangeModal'));
-
+let WinnerModal = new bootstrap.Modal(document.getElementById("WinnerModal"));
 document.getElementById("startbutton").addEventListener("click", function () {
     myModal.show();
 })
@@ -337,7 +337,9 @@ async function tryToPlayCard(value, color, wildColor, isDrawCard) {
             }
 
             setCurrentPlayer(cardPlayresult);
-
+            if (isWinner() != null) {
+                WinnerModal.show();
+            }
         }
         else {
             alert("Error: " + cardPlayresult.error);
@@ -606,4 +608,17 @@ function openTab(evt, tabName) {
     evt.currentTarget.style.backgroundColor = '#ddd';
 }
 
+function isWinner() {
+    for (let i = 0; i < playerList.length; i++) {
+        if (playerList[i].Cards.length == 0) {
+            let winner = playerList[i].Player;
+            console.log(winner + "wins this game!");
+            document.getElementById("winner").textContent= winner + " wins this game!";
+            return winner;
+        }
+        else {
+            return;
+        }
+    }
 
+}
