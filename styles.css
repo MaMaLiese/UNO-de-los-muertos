@@ -22,6 +22,7 @@ h6 {
 button {
   margin-top: 20px;
   margin-bottom: 20px;
+  background-color:#a65cb3;
 }
 
 #playernamesform {
@@ -95,6 +96,7 @@ button {
   height: 250px;
 } */
 
+
 /* style für Animation - Rotate Direction.img */
 .rotateContainer {
   width: 150px;
@@ -120,7 +122,6 @@ button {
 /* .spinLeft {
    animation: spin-left 3s linear infinite;
 }
-
 .spinRight {
  animation: spin-right 3s linear infinite;
 } */
@@ -132,6 +133,21 @@ button {
 
 .gap-15 {
   gap: 15px;
+}
+
+/* #winnerModal {
+  width: 150%
+} */
+
+.modal-content {
+  background-color: #ebe6f7;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 100%;
+}
+.modal-header {
+  text-align: right;
 }
 
 /*help Modal style*/
@@ -148,16 +164,7 @@ button {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
 }
-.modal-content {
-  background-color: #ebe6f7;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
-.modal-header {
-  text-align: right;
-}
+
 .close {
   color: #071540;
   float: right;
@@ -207,6 +214,7 @@ p {
 
 
 /*Ende help Modal style*/
+
 
 @keyframes move {
   10%,
